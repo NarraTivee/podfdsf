@@ -1229,21 +1229,6 @@ body::after {
   .contact-form {
     padding: 20px;
   }
-
-  /* Центрирование соцсетей на мобильных */
-  .hero-social {
-    justify-content: center;
-    width: 100%;
-    padding-left: 0;
-    margin-left: 0;
-  }
-
-  .hero-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1287,5 +1272,39 @@ body::after {
   .glow-genz-button {
     padding: 10px 24px;
     font-size: 16px;
+  }
+}
+
+/* ===== ФИКС ДЛЯ СОЦСЕТЕЙ НА МОБИЛЬНЫХ ===== */
+@media screen and (max-width: 768px) {
+  .hero-social {
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: flex !important;
+  }
+
+  .hero-social .social-link {
+    margin: 0 8px;
+    flex-shrink: 0;
+  }
+
+  /* Гарантированное центрирование всего hero-текста */
+  .hero-text {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .hero-quote {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 100% !important;
   }
 }
